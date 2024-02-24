@@ -1,0 +1,182 @@
+/* styles.css */
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+} 
+
+body { 
+	font-family: sans-serif; 
+	background: radial-gradient(circle at 85.4% 50.8%, rgb(14, 72, 222) 0%, rgb(3, 22, 65) 74.2%);
+	color: white; 
+} 
+
+h1 { 
+	background: linear-gradient(89.9deg, rgb(255, 18, 18) -2.8%, rgb(252, 246, 19) 50.8%, rgb(0, 159, 8) 107.9%);
+	font-size: 45px;
+}
+
+h1, 
+h3 { 
+	color: transparent; 
+	background-clip: text; 
+	-webkit-background-clip: text; 
+	-webkit-text-fill-color: transparent; 
+} 
+
+.app { 
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center; 
+	align-items: center; 
+	width: 650px; 
+	margin: 1rem auto; 
+	padding: 10px; 
+	gap: 20px; 
+} 
+
+.inputs { 
+	width: 100%; 
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center; 
+	gap: 20px; 
+	height: fit-content; 
+} 
+
+.inputs>div { 
+	height: 100%; 
+	display: flex; 
+	justify-content: space-between; 
+	flex-direction: column; 
+} 
+
+label { 
+	font-size: 15px; 
+} 
+
+input, 
+label { 
+	display: block; 
+} 
+
+input { 
+	margin-top: 8px; 
+	margin-bottom: 5px; 
+	padding: 10px; 
+	font-size: large; 
+	background: linear-gradient(109.6deg, rgb(255, 230, 109) 11.2%, rgb(87, 232, 107) 100.2%);
+	color: rgb(0, 0, 0); 
+	border: none; 
+	border-radius: 10px; 
+	width: 100%; 
+} 
+
+input:focus-visible { 
+	outline: 5px solid #0d0d0d; 
+} 
+
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+} 
+
+button{ display: block; cursor: pointer; border: none; } 
+
+#submit { 
+	width: 30%; 
+	padding: 10px; 
+	margin-bottom: 10px; 
+	background: radial-gradient(circle at 50.4% 50.5%, rgb(251, 32, 86) 0%, rgb(135, 2, 35) 90%); 
+	font-size: 1.3rem; 
+	border-radius: 20px; 
+	color: white; 
+	font-weight: bold; 
+	transition: scale 0.9s ease-in-out; 
+} 
+#submit:hover{
+	background: linear-gradient(110.9deg, rgb(159, 131, 216) 2.6%, rgb(27, 245, 241) 100.2%);
+}
+
+#editSection{ 
+	width: 100%; 
+	display: flex; 
+	gap: 25px; 
+	justify-content: space-between; 
+} 
+
+#editSection > button { 
+	width: 100%; 
+	padding: 10px; 
+	margin-bottom: 10px; 
+	font-size: 1.3rem; 
+	border-radius: 5px; 
+	color: white; 
+	font-weight: bold; 
+	transition: scale 0.3s ease-in-out; 
+} 
+
+#updateEntry { background: radial-gradient(circle at 50.4% 50.5%, rgb(251, 32, 86) 0%, rgb(135, 2, 35) 90%); } 
+
+#cancelEdit{ background-color: #ef4444; } 
+
+#submit:hover, #updateEntry:hover, #cancelEdit:hover { scale: 1.02; } 
+
+.hidden{ display: none !important; } 
+
+.edit, .delete{ 
+	margin: 0 auto; 
+	padding: 5px 10px; 
+	font-size: 1.1rem; 
+	border-radius: 5px; 
+	background-color: transparent; 
+	color: white; 
+	border: 1px solid white; 
+} 
+
+.edit:hover, .delete:hover{ 
+	background-color: #0a0a0a; 
+} 
+
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+	position: relative; 
+	overflow: hidden; 
+} 
+
+th, 
+td { 
+	text-align: center; 
+	padding: 10px; 
+	border: 0; 
+} 
+tr:nth-child(even) { 
+	background-color: #57534e; 
+} 
+
+tr:nth-child(odd) { 
+	background-color: #262626; 
+} 
+
+th { 
+	font-size: 0.9rem; 
+	background-color: #0a0a0a; 
+} 
+
+tbody > tr:hover{ 
+	background: linear-gradient(89.9deg, rgb(255, 18, 18) -2.8%, rgb(252, 246, 19) 50.8%, rgb(0, 159, 8) 107.9%);
+	color: black; 
+} 
+
+.delete-animation{ 
+	background-color: #f90e05 !important; 
+	animation: deleteAnimate 0.4s linear forwards; 
+} 
+
+@keyframes deleteAnimate{ 
+	to{ 
+		transform: translateX(100%); 
+	} 
+}
